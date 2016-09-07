@@ -118,4 +118,18 @@ Some examples of categories:
   
 \end{definition}
 
+\begin{theorem}
+  Let $ A $ and $B$ be objects and lot $ A \rightarrow["i_0"] P \leftarrow["i_1"] B $ and
+  $ A \rightarrow["j_0"] Q \leftarrow["j_1"] B $ be two sums of A and B.
+  Then there exists a unique isomorphism $f:P \rightarrow Q $ such that the following diagram commutes:
+
+  \[
+  \begin{tikzcd}
+                                         & P \arrow[dd, "f"] &   \\
+  A  \arrow[dr, "j_0"] \arrow[ur, "i_0"] &                   & B \arrow[ul, "i_1"] \arrow[dl, "j_1"]\\
+                                         & Q                 &   \\
+  \end{tikzcd}
+  \]
+\end{theorem}
+
 \end{document}
