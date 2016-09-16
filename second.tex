@@ -1,0 +1,40 @@
+\begin{definition}
+  An object $0$ is an initial object if for every object A, there is a unique
+  map $ 0 \rightarrow A $
+\end{definition}
+
+\begin{definition}
+  The disjoint union of two sets $A$ and $B$ is the set
+  $ A \sqcup B = {(0,a):a \in A} \cup {(1,b):b \in B}. $
+\end{definition}
+
+\begin{definition}[Coproduct]
+  Let $A$ and $B$ be objects in a category.
+  Then a sum (or coproduct) of $A$ and $B$ is an object $A + B$
+  together with maps $i_0 : A \rightarrow A + B $ and $i_1 : B \rightarrow A + B $
+  such that whenever we have an object $C$ and maps
+  $f_0 : A \rightarrow C$ and $f_1 : B \rightarrow C$, there is a unique map
+  $f : A + B \rightarrow C$ such that $f_0 = fi_0 $ and $f_1 = fi_1$
+
+  \[
+  \begin{tikzcd}
+  A \arrow[dr, "f_0"] \arrow[r, "i_0"] & A + B & \arrow[l, "i_1"] \arrow[dl, "f_1"] B \\
+                                       &   C   & 
+  \end{tikzcd}
+  \]
+  
+\end{definition}
+
+\begin{theorem}
+  Let $ A $ and $B$ be objects and lot $ A \rightarrow["i_0"] P \leftarrow["i_1"] B $ and
+  $ A \rightarrow["j_0"] Q \leftarrow["j_1"] B $ be two sums of A and B.
+  Then there exists a unique isomorphism $f:P \rightarrow Q $ such that the following diagram commutes:
+
+  \[
+  \begin{tikzcd}
+  & P \arrow[dd, "f"] &   \\
+  A  \arrow[dr, "j_0"] \arrow[ur, "i_0"]  & & B \arrow[ul, "i_1"] \arrow[dl, "j_1"]\\
+  & Q                 &   \\
+  \end{tikzcd}
+  \]
+\end{theorem}

@@ -1,0 +1,80 @@
+\begin{definition}
+  A category consists of objects $obj(C)$ and arrows $hom(C)$
+\end{definition}
+
+Categories focus on the relation between themselves, the arrows are the important parts. Here is an example category showing function composition with a communative diagram.
+\[
+\begin{tikzcd}[row sep=2.5em]
+  & A \arrow[dr, "g"] \\
+  B \arrow[ur, "f"] \arrow[rr, "g \circ f"] & & C
+\end{tikzcd}
+\]
+
+And a quick check of why these are called communative diagrams
+$$
+h \circ (g \circ f) = (h \circ g) \circ f
+$$
+
+\begin{note}
+  For any category $C$ there is always an identity arrow $1_C$
+  though it would clutter diagrams if it were written every time.
+  \begin{tikzcd}
+    C \arrow[loop right, "id_C"]
+  \end{tikzcd}
+\end{note}
+
+There is always one unique identity homomorphism.
+$ \exists ! 1_A : A \rightarrow A$
+
+\begin{proof}
+  Assume there are two unique identity morphisms from category
+  $A$, $1$ and $1'$ as shown in the diagram below.
+  \[\begin{tikzcd}
+  A \arrow[r, red, shift left, "1"] \arrow[r, blue, shift right, swap, "1'"] & A
+  \end{tikzcd}\]
+  Then composing these two homomorphisms makes a contradiction.
+  $$ 1 = 1 \circ 1' = 1' $$
+\end{proof}
+
+\begin{note}
+  A homomorphism moving between a category and itself is also know as an endomorphism.
+\end{note}
+
+\begin{definition}
+  Small and Locally small categories
+  \\
+  Let $C$ be a category
+  \begin{itemize}
+  \item if all $hom(C)$'s together form a set, the category is small
+  \item if $hom$ are all sets, the category is locall small
+  \end{itemize}
+\end{definition}
+
+Some examples of categories:
+\begin{itemize}
+\item SET - The category of all sets with mappings between them is locally small but not small
+  $$ \mathcal{P}(\mathbb{X}) = \{A \subseteq \mathbb{X}\} = 2^{\mathbb{X}} $$
+  %$$ A \subseteq \mathbb{X} \leftrightsquigarrow \psi_A(x) =
+  %\begin{cases}
+  %  1   x \in A \\
+  %  0   x \notin
+  %\end{cases} $$
+  $ B^A $ :: All functions from $A \rightarrow B $
+\item Grp - An object is a group and a map $ G \rightarrow H $ is a group homomorphism
+\item Vect - An object is a vector space and a map $ V \rightarrow W $ is a linear map
+\end{itemize}
+
+\begin{definition}
+  Let $A$ and $B$ be objcets in a category. Them a map $f : A \rightarrow B$ is an
+  isomorphism is the is a map $ f^{-1}  : B \rightarrow A $ (the inverse of f) such that
+  $f^{-1} \circ f = Id_A $ and $f \circ f^{-1} = Id_B$.
+
+  If there exists an isomorphism between $A$ and $B$,
+  we say that $A$ and $B$ are isomorphic and write $A \cong B$.
+\end{definition}
+
+\begin{proposition}
+  In Set, a map is an isomorphism iff it is a bijection. Two sets are isomorphic
+  off they have the same cardinality.
+\end{proposition}
+
