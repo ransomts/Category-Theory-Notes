@@ -1,8 +1,11 @@
 \begin{definition}
-  A category consists of objects $obj(C)$ and arrows $hom(C)$
+  A category $C$ consists of objects $obj(C)$ and arrows $hom(C)$
 \end{definition}
 
-Categories focus on the relation between themselves, the arrows are the important parts. Here is an example category showing function composition with a communative diagram.
+Categories focus on the relation between themselves,
+the arrows are the important parts. Here is an example
+category showing function composition with a commutative diagram.
+
 \[
 \begin{tikzcd}[row sep=2.5em]
   & A \arrow[dr, "g"] \\
@@ -10,7 +13,7 @@ Categories focus on the relation between themselves, the arrows are the importan
 \end{tikzcd}
 \]
 
-And a quick check of why these are called communative diagrams
+And a quick check of why these are called commutative diagrams
 $$
 h \circ (g \circ f) = (h \circ g) \circ f
 $$
@@ -23,8 +26,10 @@ $$
   \end{tikzcd}
 \end{note}
 
+\begin{proposition}
 There is always one unique identity homomorphism.
-$ \exists ! 1_A : A \rightarrow A$
+$ \exists ! 1_A : A \rightarrow A $
+\end{proposition}
 
 \begin{proof}
   Assume there are two unique identity morphisms from category
@@ -40,13 +45,11 @@ $ \exists ! 1_A : A \rightarrow A$
   A homomorphism moving between a category and itself is also know as an endomorphism.
 \end{note}
 
-\begin{definition}
-  Small and Locally small categories
-  \\
+\begin{definition}{Small and Locally small categories}
   Let $C$ be a category
   \begin{itemize}
   \item if all $hom(C)$'s together form a set, the category is small
-  \item if $hom$ are all sets, the category is locall small
+  \item if $hom$ are all sets, the category is locally small
   \end{itemize}
 \end{definition}
 
@@ -65,7 +68,7 @@ Some examples of categories:
 \end{itemize}
 
 \begin{definition}
-  Let $A$ and $B$ be objcets in a category. Them a map $f : A \rightarrow B$ is an
+  Let $A$ and $B$ be objects in a category. Them a map $f : A \rightarrow B$ is an
   isomorphism is the is a map $ f^{-1}  : B \rightarrow A $ (the inverse of f) such that
   $f^{-1} \circ f = Id_A $ and $f \circ f^{-1} = Id_B$.
 
