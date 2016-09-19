@@ -1,0 +1,3 @@
+* Heyting Algebra
+
+* Relationship between lattices and propositional logic
