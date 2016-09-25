@@ -1,3 +1,4 @@
 * Heyting Algebra
 
 * Relationship between lattices and propositional logic
+* Proposition 5.21
