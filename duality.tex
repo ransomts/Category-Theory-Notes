@@ -1,0 +1,28 @@
+\begin{proposition}{Formal Duality}
+  For any sentence \Sigma in the language of category theory, if \Sigma
+  follows from the axioms for categories, then so does its dual \Sigma^*:
+
+  $$ CT \Rightarrow \Sigma implies CT \Rightarrow \Sigma^* $$
+\end{proposition}
+
+Taking a diagram to illustrate, if this is a statement \Sigma
+\[
+  \begin{tikzcd}
+    A \arrow[r, "f"] \arrow[dr, "g \circ f"] & B \arrow[d, "g"] \\
+    & C
+  \end{tikzcd}
+\]
+
+then this is the dual statement \Sigma^*
+\[
+  \begin{tikzcd}
+    A  & B \arrow[l, "f"] \\
+    & C \arrow[ul, "f \circ g"] \arrow[u, "g"]
+  \end{tikzcd}
+\]
+Note how close this is to the idea of an opposite category $C^{op}$.
+
+\begin{proposition}{Conceptual duality}
+  For any statement \Sigma about categories, if \Sigma holds for
+  all categories, then so does the dual statement \Sigma^*.
+\end{proposition}

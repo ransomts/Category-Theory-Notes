@@ -3,6 +3,23 @@
   map $ 0 \rightarrow A $
 \end{definition}
 
+\begin{proposition}
+  Initial and terminal objects are unique up to isomorphism.
+\end{proposition}
+\begin{proof}
+  Suppose that $0$ and $0'$ are both terminal or initial objects
+  in some category $C$; this diagram states that $0$ and $0'$ are uniquely isomorphic.
+
+  \[
+    \begin{tikzcd}
+      0 \arrow[r, "u"] \arrow[dr, 1_{0} & 0' \arrow[d, "v"] \arrow["dr", 1_{0'}] &
+      \\
+      & 0 \arrow[r, "u"] & 0'
+    \end{tikzcd}
+  \]
+  For terminal objects, apply the previous to $C^{op}$.
+\end{proof}
+
 \begin{definition}{Disjoint Union}
   The disjoint union of two sets $A$ and $B$ is the set 
   $$ A \sqcup B = {(0,a):a \in A} \cup {(1,b):b \in B}. $$
@@ -25,8 +42,10 @@
   
 \end{definition}
 
+%TODO: Put in example 3.8 (In the category of proofs...)
+
 \begin{theorem}
-  Let $ A $ and $B$ be objects and lot $ A \rightarrow["i_0"] P \leftarrow["i_1"] B $ and
+  Let $ A $ and $B$ be objects and let $ A \rightarrow["i_0"] P \leftarrow["i_1"] B $ and
   $ A \rightarrow["j_0"] Q \leftarrow["j_1"] B $ be two sums of A and B.
   Then there exists a unique isomorphism $f:P \rightarrow Q $ such that the following diagram commutes:
 
