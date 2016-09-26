@@ -62,3 +62,16 @@ The category of types $ C(\lambda ) $ is now defined as follows:
   and all binary products (and therewith products of any finite cardinality). The
   category $C$ has all (small) products if every set of objects in $C$ has a product.
 \end{definition}
+
+\begin{definition}{Slice Category}
+  Let $C$ be a category, and $I$ be a $C$-object. Then the category $C / I$, the slice
+  category over I, has the following data.
+  \begin{itemize}
+  \item The objects are pairs (A, f) where $A$ is an object in $C$ and $f: A \rtarw I$ is
+    an arrow.
+  \item An arrow from $(A, f)$ to $(B, g)$ is an arrow $j: A \rtarw B$ such that $g \circ j = f$ in $C$
+  \item The identity arrow on $(A, f)$ is the arrow $1_A : A \rtarw A$.
+  \item Given arrows $j: (A, f) \rtarw (B, g)$ and $ k: (B, g) \rtarw (C, h) $, their compostion
+    $k \circ j: (A, f) \rtarw (C, h)$ is the arrow $k \circ j : A \rtarw C$.
+  \end{itemize}
+\end{definition}
