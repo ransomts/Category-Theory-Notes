@@ -1,0 +1,28 @@
+
+\section{Epis and monos}
+
+\begin{definition}
+
+  In any category C, an arrow $$ f : A \rtarw B $$ is
+  called a \textit{monomorphism} if given any $ g, h : C \rtarw A$,
+  $gh = fh$ implies $g = h$ \\
+
+  \textit{epimorphism} if given any $i,j : B \rtarw D, if = jf$ implies $i = j$
+
+  % TODO: put in diagrams and arrows with fancy heads/tails
+
+\end{definition}
+
+Having a left inverse is monic and having a right inverse is epic. Having both makes the mapping an isomorphism. In SETS, the converse of the previous is also true: every mono-epi is iso; but this is not true in the general case.
+% TODO: Propostion 2.6
+
+This definition of monomorphism is the category theory equivalent to injective and this definition of epimorphism is the surjective translation.
+
+
+\begin{proposition}
+
+  A \textit{function} $ f : A \rtarw B$ between sets is monic just in case it is injective. 
+  
+\end{proposition}
+
+\input{initials_terminals}
