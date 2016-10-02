@@ -1,3 +1,6 @@
 contents.org
 *.aux
 *.log
+notes.bbl
+notes.blg
+notes.ps
