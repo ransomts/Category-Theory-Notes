@@ -1,0 +1,51 @@
+\section{Exponential}
+
+\begin{definition}
+  For a cotegory C with binary products, an exponential $C^B$
+  is associated with two objects and an evaluation arrow
+  $ \epsilon : A \times B \rtarw $ if
+  \begin{tikzcd}
+    $A \times B$ \arrow[r, "f"] & $C$
+  \end{tikzcd}
+  then there exists a unique
+  \begin{tikzcd}
+    $A \times B$ \arrow[r, $\tilde{f}$] & $C^B$
+  \end{tikzcd}
+  where \tilde{f} is the transpose of $f$ such that
+  \begin{tikzcd}
+    $C^B \times B$ \arrow[r, $\sigma$] & C \\
+    $A \times B$ \arrow[u, "$\tilde{f} \times 1_{B}$"] \arrow[ur, "f"]
+  \end{tikzcd}
+  and
+  \begin{tikzcd}
+    $C^B$ \\
+    A \arrow[u, "g"]
+  \end{tikzcd}
+
+\end{definition}
+
+Check the transpose of the transpose is the thing...
+\begin{center}
+  \begin{tabular}
+
+    $ \sigma \circ f \times 1_B = \tilde{f} $
+    $ \bar{\tilde{f}} = \sigma \circ ( \tilde{f} \times 1_B ) = f $
+    $ \bar{g} = \sigma \circ (g \times 1_B ) \therefore \tilde{\bar{g}} = g $
+
+  \end{tabular}
+\end{center}
+
+In set:
+$$ C^B = \{ f : B \rtarw C \} $$
+$$ \sigma : C^B \times B \rtarw C $$
+$$ \sigma (f, b) = f(b) $$
+So...
+$$ f : A \times B \rtarw C $$
+$$ f(a, b) = c $$
+$$ \tilde{f(a)} = f(a, *) : B \rtarw C $$
+$$ g : A \rtarw C^B $$
+$$ \bar{g} : A \times B \rtarw C $$
+$$ \bar{g}(a, b) = (g(a))(b) $$
+This is just currying!
+
+% TODO: Example 6.6 with graphs pg 124
