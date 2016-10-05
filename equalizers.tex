@@ -32,4 +32,43 @@ $$ E = \{g \in G | \phi (g) = f(g)\} = \{g \in G | \phi (g) = 1_{+1)}\} $$
   Is the kernel by definition, also equalizers don't have to exist.
 
   \subsection{Equalizers}
+  \section{Equalizers and Coqualizers}
+\subsection{Equalizers}
+\begin{proposition}
+
+  In any category, if $e : E \rtarw A$ is an eualizer of some pair of arrows, then e is monic.
+
+\end{proposition}
+
+\begin{proof}
+
+  Consider the diagram
+  \[
+  \begin{tikzcd}
+    E \arrow[r, "e"] & A \arrow[r, shift left, "f"] \arrow[r, shift right, swap, "g"] & B \\
+    Z \arrow[u, shift left, "x"] \arrow[u, shift right, swap, "y"] \arrow[ur, swap, "z"]& & \\
+  \end{tikzcd}
+\]
+  in which we assume $e$ is the equalizer of $f$ and $g$. Supposing $ex = ey$, we want to show $ x = y $. Put $z = ex = ey$. Then $fz = fex = gex = gz$, so there is a \textit{unique} $u : Z \rtarw E$ such that $eu = z$. So from $ex = z$ th follows that $x = u = y$.
   
+\end{proof}
+
+In SETS, the qualizer would just be the set $ { x \in A | f(x) = g(x) } $.
+
+
+Awodey: In abelian groups though, using the fact that $$ f(x) = g(x)$$ iff $$(f-g)(x) = 0 $$ we know that the equalizer of $f$ and $g$ is the same as that of the homomorphism $(f-g)$ and the zero homomorphism $ 0 : A \rtarw B $, so it suffices to consider equalizers of the special form $ A(h, 0) \rightarrowtail A $ for arbitrary homomorphisms $ h: A \rtarw B $. This subgroup of A sis the \textit{kernel}.
+
+Cook: In abelian groups:
+\begin{tikzcd}
+  G \arrow[r, shift left, "Hom \phi"] \arrow[r, shift right, swap, "f"] & H
+\end{tikzcd}
+$$ E = \{g \in G | \phi (g) = f(g)\} = \{g \in G | \phi (g) = 1_{+1}\} $$
+  Is the kernel by definition, also equalizers don't have to exist.
+
+  \subsection{Coequalizers}
+  \begin{tikzcd}
+    A \arrow[r, shift left] \arrow[r, shift right] & B \arrow[r, two heads, "c"] \arrow[dr, "z"] & Q \arrow[d, dashrightarrow, "u"] \\
+    &&Z
+  \end{tikzcd}
+
+  This is the weakest equivalence relation that forces $f(a)$ relates $g(a) \forall a \in A$
