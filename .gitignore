@@ -4,3 +4,6 @@ contents.org
 notes.bbl
 notes.blg
 notes.ps
+/notes.dvi
+/notes.fdb_latexmk
+/notes.fls

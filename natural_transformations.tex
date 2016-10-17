@@ -2,26 +2,26 @@
 
 \begin{tikzcd}
   \mathcal{C} \arrow[r, bend left, "F"{name=F}]
-  \arrow[r, bend right, "G"{name=G}] \arrow[d, from=F, to=g, $\eta$] & \mathcal{D}
+  \arrow[r, bend right, "G"{name=G}] \arrow[d, from=F, to=G, "\eta"] & \mathcal{D}
 \end{tikzcd}
 
 $\eta$ is a natural transformation $\forall C \in obj(\mathcal{C})$ we have a morphism
-
+\[
 \begin{tikzcd}
-  F(C) \arrow[r, $\eta_{C}$] & G(C)
+  F(C) \arrow[r, "\eta_{C}"] & G(C)
 \end{tikzcd}
-
+\]
 such that given $f: A \rtarw B$ in $\mathcal{C}$
 
 \begin{tikzcd}
-  F(A) \arrow[r, $\eta_{A}$] \arrow[d, "F(f)"] & G(A) \arrow[d, "G(f)"] \\
-  F(B) \arrow[r, $\eta_{B}$] & G(B)
+  F(A) \arrow[r, "\eta_{A}"] \arrow[d, "F(f)"] & G(A) \arrow[d, "G(f)"] \\
+  F(B) \arrow[r, "\eta_{B}"] & G(B)
 \end{tikzcd}
 
 We also have the identity:
 \begin{tikzcd}
   \mathcal{C} \arrow[r, bend left, "F"{name=F}]
-  \arrow[r, bend right, "F"{name=G}] \arrow[d, from=F, to=g, "1_F"] & \mathcal{D}
+  \arrow[r, bend right, "F"{name=G}] \arrow[d, from=F, to=G, "1_F"] & \mathcal{D}
 \end{tikzcd}
 
 Composition and communitivity work here too!
