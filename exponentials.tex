@@ -18,7 +18,7 @@
   where $\tilde{f}$ is the transpose of $f$ such that
   \[
   \begin{tikzcd}
-    C^B \times B \arrow[r, "\sigma"] & C \\
+    C^B \times B \arrow[r, "\varepsilon"] & C \\
     A \times B \arrow[u, "\tilde{f} \times 1_{B}"] \arrow[ur, "f"]
   \end{tikzcd}
   and
@@ -31,15 +31,15 @@
 
 Check the transpose of the transpose is the thing...
 
-    $$ \sigma \circ f \times 1_B = \tilde{f} $$ 
-    $$ \bar{\tilde{f}} = \sigma \circ ( \tilde{f} \times 1_B ) = f $$ 
-    $$ \bar{g} = \sigma \circ (g \times 1_B ) \therefore \tilde{\bar{g}} = g $$
+    $$ \varepsilon \circ f \times 1_B = \tilde{f} $$ 
+    $$ \bar{\tilde{f}} = \varepsilon \circ ( \tilde{f} \times 1_B ) = f $$ 
+    $$ \bar{g} = \varepsilon \circ (g \times 1_B ) \therefore \tilde{\bar{g}} = g $$
 
 
 In set:
 $$ C^B = \{ f : B \rtarw C \} $$
-$$ \sigma : C^B \times B \rtarw C $$
-$$ \sigma (f, b) = f(b) $$
+$$ \varepsilon : C^B \times B \rtarw C $$
+$$ \varepsilon (f, b) = f(b) $$
 So...
 $$ f : A \times B \rtarw C $$
 $$ f(a, b) = c $$
@@ -49,4 +49,36 @@ $$ \bar{g} : A \times B \rtarw C $$
 $$ \bar{g}(a, b) = (g(a))(b) $$
 This is just currying!
 
+\subsection{More Exponentials}
+
+Another way to write $ A \times B \rtarw C $ is as $ A \rtarw C^B $,
+meaning $Hom(A \times B, C) \cong Hom(A, C^B) $ is natural. This is an example of
+a left adjoint ($- \times B$) and a right adjoint ($ -^B $). 
+
 TODO: Example 6.6 with graphs pg 124
+
+%\begin{proposition}
+
+  $ -^A : C \rtarw C$ is a functor.
+For a functor we need to know what it does with objects and with morphisms.
+%  \begin{proof}
+
+    Define $ \beta : B^A \rtarw C^A $ and $ \varepsilon : <TODO> $.
+    then
+  \begin{tikzcd}
+    B \arrow[|->, r] & B^A &
+    B \arrow[r, "\beta"] & C &
+    B^A \arrow[r, "\beta \circ \varepsilon"] & C^A 
+  \end{tikzcd}
+
+%  \begin{tikzcd}
+    
+%    A \arrow[r, "\varepsilon"] & C \\
+%    B^A \times A \arrow[u, "\bar{\beta \circ \varepsilon} \times 1_A"]
+%    \arrow[ur, "\beta \circ \varepsilon"] &
+    
+%  \end{tikzcd}
+    
+%  \end{proof}
+  
+%\end{propostion}
