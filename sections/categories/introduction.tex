@@ -11,10 +11,10 @@ the arrows are the important parts. Here is an example
 category showing function composition with a commutative diagram.
 
 \[
-\begin{tikzcd}[row sep=2.5em]
-  & A \arrow[dr, "g"] \\
-  B \arrow[ur, "f"] \arrow[rr, "g \circ f"] & & C
-\end{tikzcd}
+  \begin{tikzcd}[row sep=2.5em]
+    & A \arrow[dr, "g"] \\
+    B \arrow[ur, "f"] \arrow[rr, "g \circ f"] & & C
+  \end{tikzcd}
 \]
 
 And a quick check of why these are called commutative diagrams
@@ -31,16 +31,16 @@ $$
 \end{note}
 
 \begin{proposition}
-There is always one unique identity homomorphism.
-$ \exists ! 1_A : A \rightarrow A $
+  There is always one unique identity homomorphism.
+  $ \exists ! 1_A : A \rightarrow A $
 \end{proposition}
 
 \begin{proof}
   Assume there are two unique identity morphisms from category
   $A$, $1$ and $1'$ as shown in the diagram below.
   \[\begin{tikzcd}
-  A \arrow[r, red, shift left, "1"] \arrow[r, blue, shift right, swap, "1'"] & A
-  \end{tikzcd}\]
+      A \arrow[r, red, shift left, "1"] \arrow[r, blue, shift right, swap, "1'"] & A
+    \end{tikzcd}\]
   Then composing these two homomorphisms makes a contradiction.
   $$ 1 = 1 \circ 1' = 1' $$
 \end{proof}
@@ -61,11 +61,11 @@ Some examples of categories:
 \begin{itemize}
 \item SET - The category of all sets with mappings between them is locally small but not small
   $$ \mathcal{P}(\mathbb{X}) = \{A \subseteq \mathbb{X}\} = 2^{\mathbb{X}} $$
-  %$$ A \subseteq \mathbb{X} \leftrightsquigarrow \psi_A(x) =
-  %\begin{cases}
-  %  1   x \in A \\
-  %  0   x \notin
-  %\end{cases} $$
+  % $$ A \subseteq \mathbb{X} \leftrightsquigarrow \psi_A(x) =
+  % \begin{cases}
+  %   1   x \in A \\
+  %   0   x \notin
+  % \end{cases} $$
   $ B^A $ :: All functions from $A \rightarrow B $
 \item Grp - An object is a group and a map $ G \rightarrow H $ is a group homomorphism
 \item Ab - Abelian groups under homomorphism
