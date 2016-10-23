@@ -2,3 +2,4 @@
 
 * Relationship between lattices and propositional logic
 * Proposition 5.21
+* The opposite category is not a functor, why?

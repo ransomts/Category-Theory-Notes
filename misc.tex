@@ -1,1 +1,46 @@
+\section{Misc}
+
 Every topology provides a complete heyting algebra in the form of its opn set lattice.
+
+\subsection{Constructions on Categories}
+
+$C \times D$  has elements (A, B), we define
+$ f : A \rtarw C $
+$ g : B \rtarw D $,
+$ h : A \times B \rtarw C \times D $ or $ h : (f, g) $
+
+% \[
+% \begin{tikzcd}
+
+% (A, B) \arrow[r, "(f,g)"] & (C, D) \\
+
+% \end{tikzcd}
+% \]
+
+Projections
+\[
+  \begin{tikzcd}
+    & C \times D \arrow[dl, "\pi_1"] \arrow[dr, "\pi_2"] &   \\
+    C  &  & D \\
+  \end{tikzcd}
+\]
+
+$\pi_1( 1_A, 1_B )= 1_A = 1_{\pi_1(A, B)} $
+
+Opposite Category
+For any category $C$, the opposite category is notated $C^{op}$.
+It is the same but with the arrows reversed.
+
+Op is its own inverse
+$$ (C^{op})^{op} = C $$
+Op preservers products, functors, and slices % TODO: add slices notation
+$$ (C \times D)^{op} = C^{op} \times D^{op} $$
+$$ (F(C,D))^{op} = F(C^{op}, C^{op} $$
+
+Arrow Category
+
+\begin{definition}
+  Monoids
+  One object category, group without inverses
+  Natural Numbers with addition
+\end{definition}
