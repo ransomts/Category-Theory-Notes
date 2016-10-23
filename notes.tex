@@ -2,10 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\usepackage{tikz-cd}
-\usepackage{amssymb, amsthm}
-\usepackage{blindtext}
-\usepackage{subfiles}
+\usepackage{tikz-cd, amssymb, amsthm, subfiles}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
@@ -23,21 +20,34 @@
 
 \begin{document}
 
-\input{introduction}
-\input{abstract_structures}
-\input{duality}
+\section{Categories}
+\subfile{sections/categories/introduction}
 
-\input{pullbacks_pushins}
+\section{Abstract Structures}
+\subfile{sections/abstract_structures/abstract_structures}
+\subfile{sections/abstract_structures/initials_terminals}
 
-\input{equalizers}
+\section{Duality}
+\subfile{sections/duality/duality}
+\subfile{sections/duality/equalizers}
 
-\input{cones}
-\input{exponentials}
+% \section{Groups and Categories}
 
-\input{natural_transformations}
+\section{Limits and Colimits}
+\subfile{sections/limits_colimits/cones}
+\subfile{sections/limits_colimits/prop_5_21}
+\subfile{sections/limits_colimits/pullbacks_pushins}
 
-\input{cartesian_closed_categories}
+\section{Exponentials}
+\subfile{sections/exponentials/exponentials}
+\subfile{sections/exponentials/cartesian_closed_categories}
 
-\input{misc}
+\section{Naturality}
+\subfile{sections/naturality/functors}
+\subfile{sections/naturality/natural_transformations}
+\subfile{sections/naturality/representable_functors}
+
+\section{Misc}
+\subfile{sections/misc}
 
 \end{document}
