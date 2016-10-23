@@ -1,5 +1,5 @@
 contents.org
 *.aux
 *.log
-*/*/*.pdf
-*/*.pdf
+./sections/*/*.pdf
+./sections/misc.pdf
