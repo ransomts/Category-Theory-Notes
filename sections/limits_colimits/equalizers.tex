@@ -1,0 +1,52 @@
+\documentclass[../../notes.tex]{subfiles}
+
+\begin{document}
+
+\begin{definition}
+
+  Given a pair of categories and parallel morphisms of the shape
+  \[
+  \begin{tikzcd}
+    A \arrow[r, shift left, "f"] \arrow[r, shift right, swap, "g"]& B 
+  \end{tikzcd}
+\]
+
+The equalizer is the limit. 
+  
+\end{definition}
+
+This means that for $f : A \rtarw B$ and $g : A \rtarw B$ in a category $C$,
+their equalizer is, if it exists
+\begin{itemize}
+\item an object $eq(f,g) \in C$
+\item a morphism $eq(f,g) \rtarw x$
+\item such that
+  \begin{itemize}
+  \item pulled back to $eq(f,g)$ both morphisms become equal
+  \item and $eq(f,g)$ is the universal object with this property
+  \end{itemize}
+\end{itemize}
+
+Examples :
+In $C$ = SET, the equalizer of two function of sets is the subset of
+elements of $c$ on which both functions coincide
+\[ eq(f,g) = {s \in c | f(s) = g(s)} \] 
+
+For $C$ a category with a zero object the equalizer of a morphism
+$f : c \rtarw d$ with the corresponding zero morphism is the kernel of $f$.
+
+\begin{prop}
+
+  A category has equalizers if it has products and pullbacks.
+  
+\end{prop}
+
+\begin{prop}
+
+  If a category has products and equalizers, then it has limits.
+  
+\end{prop}
+
+
+
+\end{document}
