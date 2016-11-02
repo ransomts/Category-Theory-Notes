@@ -15,8 +15,10 @@
   Consider the diagram
   \[
     \begin{tikzcd}
-      E \arrow[r, "e"] & A \arrow[r, shift left, "f"] \arrow[r, shift right, swap, "g"] & B \\
-      Z \arrow[u, shift left, "x"] \arrow[u, shift right, swap, "y"] \arrow[ur, swap, "z"]& & \\
+      E \arrow[r, "e"] &
+      A \arrow[r, shift left, "f"] \arrow[r, shift right, swap, "g"] & B \\
+      Z \arrow[u, shift left, "x"] \arrow[u, shift right, swap, "y"]
+      \arrow[ur, swap, "z"]& & \\
     \end{tikzcd}
   \]
   in which we assume $e$ is the equalizer of $f$ and $g$. Supposing $ex = ey$, we want to show $ x = y $. Put $z = ex = ey$. Then $fz = fex = gex = gz$, so there is a \textit{unique} $u : Z \rtarw E$ such that $eu = z$. So from $ex = z$ follows that $x = u = y$.
@@ -45,7 +47,7 @@ Is the kernel of a homomorphism by definition, also equalizers don't have to exi
 
 \subsubsection{Coequalizers}
 \begin{tikzcd}
-  A \arrow[r, shift left] \arrow[r, shift right] & B \arrow[r, two heads, "c"] \arrow[dr, "z"] & Q \arrow[d, dashrightarrow, "u"] \\
+  A \arrow[r, shift left] \arrow[r, shift right] & B \arrow[r, two heads, "c"] \arrow[dr, swap, "z"] & Q \arrow[d, dashrightarrow, "u"] \\
   &&Z
 \end{tikzcd}
 
