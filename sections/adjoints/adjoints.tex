@@ -1,0 +1,40 @@
+\documentclass[../../notes.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Adjoints}
+
+\begin{definition}[Adjoint]
+
+  A adjunction between categoriies C and D consists of functors
+  \[
+    \begin{tikzcd}
+      F : C \arrow[r, shift right] & D : C \arrow[l, shift right]
+    \end{tikzcd}
+  \]
+
+  with a natural transformation
+  \[
+    \eta : 1_C \rtarw U \circ F
+  \]
+  with the property indicated in the diagram below
+
+  \[
+    \begin{tikzcd}
+      F(C) \arrow[r, dashrightarrow,"g"] & D \\
+      U(F(C)) \arrow[r, "U(g)"] & U(D) \\
+      C \arrow[u, "\eta_C"] \arrow[ur, "f"]
+    \end{tikzcd}
+  \]
+\end{definition}
+
+%\begin{propositon}
+  Every adjoint pair $F \dashv U$ with $ U : D \rtarw C$,
+  unit $\eta : UF \rtarw 1_C$ and counit $\epsilon : 1_D \rtarw FU$
+  gives rise to a monad $(T, \eta, \mu)$ on C with
+  \[ T = U \circ F : C \rtarw C \]
+  \[ \eta: 1 \rtarw T\]
+  \[ \mu = U_{\epsilon}F : T^2 \rtarw T \]
+ % \end{propostion}
+
+\end{document}

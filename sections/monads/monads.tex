@@ -1,0 +1,16 @@
+\documentclass[../../notes.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Monads}
+
+\begin{definition}
+
+  A monad on a category C consists of an endofunctor $ T : C \rtarw C $,
+  and natural transformations $\eta : 1_C \rtarw T$ and $\mu : T^2 \rtarw T$
+  that satisfy these two equations
+  \[ \mu \circ \mu_T = \mu \circ T\mu \]
+  \[ \mu \circ \eta_T = 1 = \mu \circ T\eta \]
+\end{definition}
+
+\end{document}

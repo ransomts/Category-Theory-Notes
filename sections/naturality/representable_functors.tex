@@ -5,8 +5,7 @@
 \subsection{Representable Functors}
 
 Let $\mathcal{C}$ be a locally small category, $ C \in obj(\mathcal{C}) $
-and $ Hom_\mathcal{C} (C, -) : \mathcal{C} \rtarw Set $. If the morphisms are set
-function, this will be a faithful (injective) mapping.
+then $ Hom_\mathcal{C} (C, -) : \mathcal{C} \rtarw Set $ is the set of representable functors. This functor is faithful if the object $C$ has the property that for any objects $X$ and $Y$ and arrows $f, g : X \rtarw Y$ if $f \neq g$ there is an arrow $x : C \rtarw X$ such that $fx \neq gx$. That is, the arrows in the category are distinguished by their effect on generalized elements based at $C$. Such an ebject $C$ is called a generator for $C$.
 
 Contravariant of a representable functor
 $ Hom_\mathcal{C}(-, C) : C^{op} \rtarw Set $
